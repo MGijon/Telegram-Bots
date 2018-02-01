@@ -82,7 +82,7 @@ def error(bot, update, error):
 
 
 def main():
-    TOKEN = '460758778:AAHnoowuFiwdjSNyYNb-h0XTUs6kcX2vIwg'
+    TOKEN = ''
     # Create the Updater and pass it your bot's token.
     updater = Updater(TOKEN)
 
