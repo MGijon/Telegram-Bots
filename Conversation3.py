@@ -11,14 +11,20 @@ logger = logging.getLogger(__name__)
 ## BOT:
 ## ===
 
-# explicar que hace esto
+    # Constantes:
+    # ----------
+
+# asignamos el 0 a 'choosing', el 1 a 'typing_reply', etc.
 CHOOSING, TYPING_REPLY, TYPING_CHOICE = range(3)
 
-reply_keyboard = [['Age', 'Favourite colour'],
-                  ['Number of siblings', 'Something else...'],
+# el teclado tendrá tres elementos con varias opciones cada uno
+reply_keyboard = [['Choosing_1', 'Choosing_2'],
+                  ['Typing_reply_1', 'Typing_2'],
                   ['Done']]
 markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard = True)
 
+    # Funciones:
+    # ---------
 
 def facts_to_str(user_data):
     '''
@@ -103,6 +109,9 @@ def error(bot, update, error):
     incluir descripción de esta cosa
     '''
     logger.warn('Update "%s" caused error "%s"' % (update, error))
+
+    # Función principal del programa:
+    # ------------------------------
 
 def main():
     '''
