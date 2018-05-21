@@ -28,7 +28,7 @@ markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard = True)
 
 def facts_to_str(user_data):
     '''
-    incluir descripción de esta cosa
+    Recopila datos del usuario y los devuelve en el formato adecuado.
     '''
     facts = list()
 
@@ -40,7 +40,8 @@ def facts_to_str(user_data):
 
 def start(bot, update):
     '''
-    incluir descripción de esta cosa
+    Se ejecuta al iniciar el bot, en este caso manda un mensaje de bienvenida y
+    lanza el teclado 'CHOOSING'.
     '''
     update.message.reply_text(
         "Hi! My name is Doctor Botter. I will hold a more complex conversation with you. "
@@ -52,7 +53,7 @@ def start(bot, update):
 
 def regular_choice(bot, update, user_data):
     '''
-    inlcuir descripción de esta cosa
+    Da a elegir y devuelve el teclado "TYPING_REPLY".
     '''
     text = update.message.text
     user_data['choice'] = text
